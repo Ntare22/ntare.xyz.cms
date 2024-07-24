@@ -1,6 +1,6 @@
-# 🚀 Getting started with Strapi
+# 🚀 cms.ntare.xyz
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This is a ntare.xyz cms for my blog, vides and work experience.
 
 ### `develop`
 
