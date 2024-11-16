@@ -15,17 +15,6 @@
     "title": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "post": {
       "type": "text"
     },
@@ -36,6 +25,12 @@
     },
     "preview": {
       "type": "text"
+    },
+    "imagesOrVideoLinks": {
+      "type": "dynamiczone",
+      "components": [
+        "links.links"
+      ]
     }
   }
 }
