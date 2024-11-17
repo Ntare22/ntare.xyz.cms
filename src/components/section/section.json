@@ -34,6 +34,9 @@
       "type": "component",
       "repeatable": true,
       "component": "experience.experience"
+    },
+    "component_name": {
+      "type": "string"
     }
   }
 }

@@ -51,6 +51,7 @@ export interface SectionSection extends Struct.ComponentSchema {
     displayName: 'Section';
   };
   attributes: {
+    component_name: Schema.Attribute.String;
     experience: Schema.Attribute.Component<'experience.experience', true>;
     image: Schema.Attribute.String;
     projects: Schema.Attribute.Component<'project.project', true>;
