@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ExperienceExperience extends Struct.ComponentSchema {
+  collectionName: 'components_experience_experiences';
+  info: {
+    description: '';
+    displayName: 'experience';
+    icon: 'check';
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    end_date: Schema.Attribute.Date;
+    role: Schema.Attribute.String;
+    start_date: Schema.Attribute.Date & Schema.Attribute.Required;
+  };
+}
+
 export interface LinksLinks extends Struct.ComponentSchema {
   collectionName: 'components_links_links';
   info: {
@@ -35,6 +51,7 @@ export interface SectionSection extends Struct.ComponentSchema {
     displayName: 'Section';
   };
   attributes: {
+    experience: Schema.Attribute.Component<'experience.experience', true>;
     image: Schema.Attribute.String;
     projects: Schema.Attribute.Component<'project.project', true>;
     socials: Schema.Attribute.Component<'links.links', true>;
@@ -58,6 +75,7 @@ export interface TagsTag extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'experience.experience': ExperienceExperience;
       'links.links': LinksLinks;
       'project.project': ProjectProject;
       'section.section': SectionSection;
