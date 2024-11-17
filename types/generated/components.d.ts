@@ -30,6 +30,7 @@ export interface LinksLinks extends Struct.ComponentSchema {
 export interface ProjectProject extends Struct.ComponentSchema {
   collectionName: 'components_project_projects';
   info: {
+    description: '';
     displayName: 'project';
     icon: 'archive';
   };
@@ -37,7 +38,7 @@ export interface ProjectProject extends Struct.ComponentSchema {
     client: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     github_link: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.String;
     link: Schema.Attribute.String;
     title: Schema.Attribute.String;
     year: Schema.Attribute.String;

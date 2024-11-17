@@ -2,7 +2,8 @@
   "collectionName": "components_project_projects",
   "info": {
     "displayName": "project",
-    "icon": "archive"
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,16 +12,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     },
     "link": {
       "type": "string"
@@ -32,6 +23,9 @@
       "type": "string"
     },
     "client": {
+      "type": "string"
+    },
+    "image": {
       "type": "string"
     }
   }
