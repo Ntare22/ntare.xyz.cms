@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_project_projects_containers",
+  "info": {
+    "displayName": "projects",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "projects": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.project"
+    }
+  }
+}

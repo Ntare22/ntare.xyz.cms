@@ -30,36 +30,49 @@ export interface LinksLinks extends Struct.ComponentSchema {
 export interface ProjectProject extends Struct.ComponentSchema {
   collectionName: 'components_project_projects';
   info: {
-    description: '';
     displayName: 'project';
-    icon: 'archive';
+    icon: 'bulletList';
   };
   attributes: {
     client: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    github_link: Schema.Attribute.String;
     image: Schema.Attribute.String;
-    link: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'links.links', true>;
+    project_name: Schema.Attribute.String;
+    tag: Schema.Attribute.Component<'tags.tag', true>;
     title: Schema.Attribute.String;
     year: Schema.Attribute.String;
   };
 }
 
-export interface SectionSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_sections';
+export interface ProjectProjectsContainer extends Struct.ComponentSchema {
+  collectionName: 'components_project_projects_containers';
   info: {
     description: '';
-    displayName: 'Section';
+    displayName: 'projects';
+    icon: 'apps';
   };
   attributes: {
-    component_name: Schema.Attribute.String;
-    experience: Schema.Attribute.Component<'experience.experience', true>;
-    image: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     projects: Schema.Attribute.Component<'project.project', true>;
-    socials: Schema.Attribute.Component<'links.links', true>;
-    sub_heading: Schema.Attribute.Text;
-    tags: Schema.Attribute.Component<'tags.tag', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_sections';
+  info: {
+    description: '';
+    displayName: 'section';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'links.links', true>;
+    section_name: Schema.Attribute.String;
+    sub_heading: Schema.Attribute.String;
   };
 }
 
@@ -80,7 +93,8 @@ declare module '@strapi/strapi' {
       'experience.experience': ExperienceExperience;
       'links.links': LinksLinks;
       'project.project': ProjectProject;
-      'section.section': SectionSection;
+      'project.projects-container': ProjectProjectsContainer;
+      'sections.section': SectionsSection;
       'tags.tag': TagsTag;
     }
   }

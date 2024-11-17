@@ -2,31 +2,37 @@
   "collectionName": "components_project_projects",
   "info": {
     "displayName": "project",
-    "icon": "archive",
-    "description": ""
+    "icon": "bulletList"
   },
   "options": {},
   "attributes": {
+    "project_name": {
+      "type": "string"
+    },
     "title": {
       "type": "string"
     },
     "description": {
       "type": "text"
     },
-    "link": {
-      "type": "string"
-    },
     "year": {
       "type": "string"
     },
-    "github_link": {
-      "type": "string"
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.links"
     },
     "client": {
       "type": "string"
     },
     "image": {
       "type": "string"
+    },
+    "tag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tags.tag"
     }
   }
 }
