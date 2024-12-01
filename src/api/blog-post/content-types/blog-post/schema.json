@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "post": {
-      "type": "text"
-    },
     "blog_tags": {
       "type": "component",
       "repeatable": true,
@@ -31,6 +28,9 @@
       "components": [
         "links.links"
       ]
+    },
+    "post": {
+      "type": "blocks"
     }
   }
 }

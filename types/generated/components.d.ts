@@ -30,6 +30,7 @@ export interface LinksLinks extends Struct.ComponentSchema {
 export interface ProjectProject extends Struct.ComponentSchema {
   collectionName: 'components_project_projects';
   info: {
+    description: '';
     displayName: 'project';
     icon: 'bulletList';
   };
@@ -39,6 +40,7 @@ export interface ProjectProject extends Struct.ComponentSchema {
     image: Schema.Attribute.String;
     link: Schema.Attribute.Component<'links.links', true>;
     project_name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
     tag: Schema.Attribute.Component<'tags.tag', true>;
     title: Schema.Attribute.String;
     year: Schema.Attribute.String;
