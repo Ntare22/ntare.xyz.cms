@@ -26,6 +26,11 @@
     },
     "image": {
       "type": "string"
+    },
+    "skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tags.tag"
     }
   }
 }

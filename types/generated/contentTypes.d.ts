@@ -373,7 +373,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   collectionName: 'abouts';
   info: {
     description: '';
-    displayName: 'About';
+    displayName: 'about';
     pluralName: 'abouts';
     singularName: 'about';
   };
@@ -382,7 +382,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
   attributes: {
     content: Schema.Attribute.DynamicZone<
-      ['sections.section', 'experience.experience']
+      ['sections.section', 'experience.companies']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

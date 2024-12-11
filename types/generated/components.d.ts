@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ExperienceCompanies extends Struct.ComponentSchema {
+  collectionName: 'components_experience_companies';
+  info: {
+    displayName: 'Companies';
+    icon: 'apps';
+  };
+  attributes: {
+    experience: Schema.Attribute.Component<'experience.experience', true>;
+  };
+}
+
 export interface ExperienceExperience extends Struct.ComponentSchema {
   collectionName: 'components_experience_experiences';
   info: {
@@ -74,6 +85,7 @@ export interface SectionsSection extends Struct.ComponentSchema {
     image: Schema.Attribute.String;
     links: Schema.Attribute.Component<'links.links', true>;
     section_name: Schema.Attribute.String;
+    skills: Schema.Attribute.Component<'tags.tag', true>;
     sub_heading: Schema.Attribute.String;
   };
 }
@@ -92,6 +104,7 @@ export interface TagsTag extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'experience.companies': ExperienceCompanies;
       'experience.experience': ExperienceExperience;
       'links.links': LinksLinks;
       'project.project': ProjectProject;
