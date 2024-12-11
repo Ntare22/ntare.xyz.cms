@@ -3,11 +3,13 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface ExperienceCompanies extends Struct.ComponentSchema {
   collectionName: 'components_experience_companies';
   info: {
+    description: '';
     displayName: 'Companies';
     icon: 'apps';
   };
   attributes: {
     experience: Schema.Attribute.Component<'experience.experience', true>;
+    section_name: Schema.Attribute.String;
   };
 }
 
