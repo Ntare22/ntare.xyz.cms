@@ -16,7 +16,8 @@
       "type": "dynamiczone",
       "components": [
         "sections.section",
-        "experience.companies"
+        "experience.companies",
+        "project.projects-container"
       ]
     }
   }

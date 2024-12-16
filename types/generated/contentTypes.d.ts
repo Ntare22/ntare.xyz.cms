@@ -382,7 +382,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
   attributes: {
     content: Schema.Attribute.DynamicZone<
-      ['sections.section', 'experience.companies']
+      ['sections.section', 'experience.companies', 'project.projects-container']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -447,6 +447,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         'experience.experience',
         'sections.section',
         'project.projects-container',
+        'experience.companies',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

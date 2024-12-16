@@ -17,7 +17,8 @@
       "components": [
         "experience.experience",
         "sections.section",
-        "project.projects-container"
+        "project.projects-container",
+        "experience.companies"
       ]
     }
   }
